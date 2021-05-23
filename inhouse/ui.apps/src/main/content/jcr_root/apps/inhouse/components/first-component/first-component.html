@@ -1,0 +1,23 @@
+My First Component.
+<p>${properties.fname}</p>
+<p data-sly-text="${properties.fname}">Lorem ipsum</p>
+<div title="${properties.columnLast}">bla</div>
+<h1 data-sly-element="${titleLevel}">one</h1>
+<p data-sly-test="${isShown}">bla</p>
+
+
+========================================
+
+<div title="" data-sly-attribute.title="${properties.fname}">Attribute Example</div>
+
+
+========================================
+
+
+<div data-sly-test="${properties.jcr:title == 'test'}">TEST</div>
+<div data-sly-test="${properties.jcr:title != 'test'}">NOT TEST</div>
+
+<div data-sly-test="${properties['pageTitle'].length > 3}">Title is longer than 3</div>
+
+
+

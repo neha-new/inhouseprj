@@ -1,0 +1,17 @@
+<sly data-sly-use.banner="com.inhouse.core.models.HeaderBanner"/>
+Translated Text :: ${'greetings' @ i18n}
+<div class="wrapper bgded overlay">
+    <img class="banner-image" src=>
+    <div id="pageintro" class="hoc clear">
+        <!-- ################################################################################################ -->
+        <article>
+            <p>${banner.strapeLineText}</p>
+            <h3 class="heading"> ${banner.bannerHeading}</h3>
+            <p>${banner.bannerRichtextbox}</p>
+            <footer><a class="btn" href="#">${banner.buttonLabel}</a></footer>
+        </article>
+        <!-- ################################################################################################ -->
+    </div>
+</div>
+
+

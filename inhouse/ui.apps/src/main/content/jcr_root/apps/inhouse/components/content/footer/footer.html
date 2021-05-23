@@ -1,0 +1,28 @@
+<sly data-sly-use.footer="com.inhouse.core.models.FooterBanner"/>
+<div class="wrapper row4">
+    <footer id="footer" class="hoc clear">
+        <div class="one_third first">
+            <h1 class="logoname">${footer.footerLogoName}</h1>
+            <p class="btmspace-30">${footer.footerRichTextBox}</p>
+            <ul class="faico clear">
+                <sly data-sly-list.socialShareItems="${footer.socialShareItemsDtos}">
+                    <li class="social-share" ><a href="${socialShareItems.SocialShareLink}"><img src="${socialShareItems.SocialShareImage}"/></a></li>
+
+                </sly>
+
+            </ul>
+        </div>
+        <div class="one_third">
+            <h6 class="heading">${footer.footerHeadingText}</h6>
+            <ul class="nospace linklist" data-sly-list.keyName="${footer.newsPageMap}">
+                <li><a href="${keyName}.html">${footer.newsPageMap[keyName]}</a></li>
+            </ul>
+        </div>
+        <div class="one_third">
+            <h6 class="heading">${footer.contactDetails}</h6>
+            <div class="">
+               <sly data-sly-text="${footer.companyAddress @context='html'}"></sly>
+            </div>
+        </div>
+    </footer>
+</div>

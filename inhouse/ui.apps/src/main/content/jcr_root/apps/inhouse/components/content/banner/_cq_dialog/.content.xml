@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Banner Component"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/container">
+        <layout
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/foundation/layouts/tabs"
+            type="nav"/>
+        <items jcr:primaryType="nt:unstructured">
+            <tab1
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Text"
+                sling:resourceType="granite/ui/components/foundation/section">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+                    margin="{Boolean}false"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <strapeLineText
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                    fieldLabel="Enter strapline text:"
+                                    name="./strapeLineText"/>
+                            <bannerHeading
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                    fieldLabel="Enter Heading Text:"
+                                    name="./bannerHeading"/>
+                            <buttonLabel
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                    fieldLabel="Enter label of button:"
+                                    name="./buttonLabel"/>
+                            <bannerRichtextbox
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                    fieldDescription="Sets the description that appears on the profiled person's page."
+                                    fieldLabel="Long Description*"
+                                    required="true"
+                                    removeSingleParagraphContainer="{Boolean}true"
+                                    useFixedInlineToolbar="{Boolean}true"
+                                    name="./bannerRichtextbox">
+                                <rtePlugins jcr:primaryType="nt:unstructured">
+                                    <format
+                                            jcr:primaryType="nt:unstructured"
+                                            features="[bold,italic]"/>
+                                    <justify
+                                            jcr:primaryType="nt:unstructured"
+                                            features="[]"/>
+                                    <lists
+                                            jcr:primaryType="nt:unstructured"
+                                            features="[]"/>
+                                </rtePlugins>
+                            </bannerRichtextbox>
+                            <bannerLink
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                    rootPath="/content/dam"
+                                    emptyText="Path to target page"
+                                    fieldLabel="Button Link"
+                                    name="./bannerLink"/>
+                            <bannerCheckbox
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                    text="Open in new Tab"
+                                    value="true"
+                                    name="./bannerCheckbox"/>
+                            <icon xmlns:jcr="http://www.jcp.org/jcr/1.0"
+                                  xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+                                  xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+                                  jcr:primaryType="nt:unstructured"
+                                  fieldLabel="Icon" name="./icon"
+                                  sling:resourceType="acs-commons/components/authoring/graphiciconselect">
+                                  <datasource jcr:primaryType="nt:unstructured"
+                                            path="/etc/acs-commons/lists/font-awesome-icons"
+                                            sling:resourceType="acs-commons/components/utilities/genericlist/datasource"/>
+                            </icon>
+                            <file
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                    autoStart="{Boolean}false"
+                                    cq-msm-lockable="/file"
+                                    class="cq-droptarget"
+                                    fieldLabel="Upload Background Image"
+                                    mimeTypes="[image/png,image/jpeg]"
+                                    multiple="{Boolean}false"
+                                    useHTML5="{Boolean}true"
+                                    name="./file"
+                                    sizeLimit="100000000"
+                                    text="Upload file"
+                                    uploadUrl="${suffix.path}"/>
+                       </items>
+                    </column>
+                </items>
+            </tab1>
+        </items>
+    </content>
+</jcr:root>
+<!--
+1.text filed(Enter the strapline text)
+2.Enter the heading text
+3.enter button label(textfield)
+4.enter link url.
+5.open in new tab(checkbox)
+6.background image select the background image with file upload.
+-->

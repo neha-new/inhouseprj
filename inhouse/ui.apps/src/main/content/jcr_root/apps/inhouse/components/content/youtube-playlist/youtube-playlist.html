@@ -1,0 +1,4 @@
+<sly data-sly-use.youtube="com.inhouse.core.models.YoutubePlaylist"/>
+<sly data-sly-list.video="${youtube.playlistDtosList}">
+    <iframe width="200" height="200" src="https://www.youtube.com/embed/${video.videoId}"></iframe>
+</sly>

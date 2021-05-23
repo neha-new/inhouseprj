@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="cq:Page">
+    <jcr:content
+            cq:template="/conf/inhouse/settings/wcm/templates/home-page-template"
+            jcr:primaryType="cq:PageContent"
+            sling:resourceType="inhouse/components/structure/home-page">
+        <root
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="inhouse/components/container"
+                layout="responsiveGrid">
+            <container
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="inhouse/components/container"
+                    layout="responsiveGrid">
+                <header_nav
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="inhouse/components/content/header-nav"
+                        email="johnsmith12@gmail.com"
+                        phone="8763452345"
+                        testProp="8251479632">
+                    <navItems jcr:primaryType="nt:unstructured">
+                        <item0
+                                jcr:primaryType="nt:unstructured"
+                                label="ABOUT"
+                                link="/content/inhouse/us/en/index/about.html"/>
+                        <item1
+                                jcr:primaryType="nt:unstructured"
+                                label="CONTACT US"
+                                link="/content/inhouse/us/en/index/contactus.html"/>
+                        <item2
+                                jcr:primaryType="nt:unstructured"
+                                label="LOGIN"
+                                link="/content/inhouse/us/en/index/login.html"/>
+                        <item3
+                                jcr:primaryType="nt:unstructured"
+                                label="REGISTER"
+                                link="/content/inhouse/us/en/index/register.html"/>
+                    </navItems>
+                </header_nav>
+            </container>
+            <footer
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="inhouse/components/content/footer"
+                    companyAddress="&lt;p>1121, 6th Av. SW&lt;/p>&#xd;&#xa;&lt;p>Calgary, Alberta&lt;/p>&#xd;&#xa;&lt;p>Canada.&lt;/p>&#xd;&#xa;&lt;p>T2P-5J4&lt;/p>&#xd;&#xa;"
+                    contactDetails="Contact Details"
+                    footerHeadingText="News And Events"
+                    footerLogoName="Nissan Motors"
+                    footerRichTextBox="The Nissan Motor Company, Ltd. is a Japanese multinational automobile manufacturer headquartered in Nishi-ku, Yokohama, Japan. The company sells its vehicles under the Nissan, Infiniti, and Datsun brands. The company traces its name to the Nissan zaibatsu, now called Nissan Group."
+                    newsPage="/content/inhouse/us/en/News"
+                    textIsRich="[true,true]">
+                <socialShareItems jcr:primaryType="nt:unstructured">
+                    <item0
+                            jcr:primaryType="nt:unstructured"
+                            SocialShareImage="/content/dam/inhouse/socialshare/googleplus.png"
+                            SocialShareLink="//www.googleplus.com"/>
+                    <item1
+                            jcr:primaryType="nt:unstructured"
+                            SocialShareImage="/content/dam/inhouse/socialshare/linkd.png"
+                            SocialShareLink="//www.linkedin.com"/>
+                    <item2
+                            jcr:primaryType="nt:unstructured"
+                            SocialShareImage="/content/dam/inhouse/socialshare/download.png"
+                            SocialShareLink="//www.facebook.com"/>
+                    <item3
+                            jcr:primaryType="nt:unstructured"
+                            SocialShareImage="/content/dam/inhouse/socialshare/twitter.png"
+                            SocialShareLink="//www.twitter.com"/>
+                </socialShareItems>
+            </footer>
+        </root>
+    </jcr:content>
+</jcr:root>
